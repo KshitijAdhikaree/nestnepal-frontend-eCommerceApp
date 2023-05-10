@@ -5,7 +5,11 @@ export const CartContext = createContext()
 const CartProvider = ({ children }) => {
   //Cart State
   const [cart, setCart] = useState([])
+  //item amount state
+  const [itemAmout, setItemAmount] = useState(0)
 
+  //update item amount
+  useEffect
   //add to cart
   const addToCart = (product, id) => {
     const newItem = { ...product, amount: 1 }
@@ -73,6 +77,7 @@ const CartProvider = ({ children }) => {
         clearCart,
         increaseAmount,
         decreaseAmount,
+        itemAmout,
       }}
     >
       {children}

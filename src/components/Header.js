@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import { SideBarContext } from '../contexts/SidebarContext'
+import { CartContext } from '../contexts/CartContext'
 import { BsBag } from 'react-icons/bs'
-import Logo from '../img/logo.svg'
+
 import { Link } from 'react-router-dom'
 
 const Header = () => {
@@ -15,7 +16,7 @@ const Header = () => {
         onClick={() => setIsOpen(!isOpen)}
         className='cursor-pointer flex relative'
       >
-        <BsBag className='text-3xl'/>
+        <BsBag className='text-3xl' />
       </div>
     </header>
   )
