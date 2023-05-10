@@ -6,9 +6,9 @@ import CartItem from '../components/CartItem'
 import { SideBarContext } from '../contexts/SidebarContext'
 import { CartContext } from '../contexts/CartContext'
 
-
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SideBarContext)
+  const { cart } = useContext(CartContext)
 
   return (
     <div
@@ -18,10 +18,16 @@ const Sidebar = () => {
     >
       <div className='flex items-center justify-between py-6 border-b'>
         <div className='uppercase text-sm font-semibold'>Shopping Bag (0)</div>
-        <div onClick={handleClose} className='cursor-pointer w-8 h-8 flex justify-center items-center'>
-          <IoMdArrowForward className='text-2xl'/>
+        <div
+          onClick={handleClose}
+          className='cursor-pointer w-8 h-8 flex justify-center items-center'
+        >
+          <IoMdArrowForward className='text-2xl' />
         </div>
       </div>
+      <div>{cart.map(item => {
+        return <div>cart item</div>
+      })}</div>
     </div>
   )
 }
