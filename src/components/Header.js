@@ -1,12 +1,16 @@
 import React, { useContext } from 'react'
 import { SideBarContext } from '../contexts/SidebarContext'
 import { BsBag } from 'react-icons/bs'
+import Logo from '../img/logo.svg'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const { isOpen, setIsOpen } = useContext(SideBarContext)
   return (
-    <header className='bg-black/40'>
-      <div>Header</div>
+    <header className='bg-black/40 flex justify-between h-[80px] mb-5 px-10 pt-4'>
+      <Link to='/'>
+        <h1 className='text-3xl font-bold'>E-Shop</h1>
+      </Link>
       <div
         onClick={() => setIsOpen(!isOpen)}
         className='cursor-pointer flex relative'

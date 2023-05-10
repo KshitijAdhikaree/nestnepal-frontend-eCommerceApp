@@ -9,7 +9,7 @@ import { CartContext } from '../contexts/CartContext'
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SideBarContext)
-  console.log(useContext(CartContext));
+
   return (
     <div
       className={`${
